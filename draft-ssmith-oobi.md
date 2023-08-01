@@ -2,7 +2,6 @@
 title: "Out-Of-Band-Introduction (OOBI) Protocol"
 abbrev: "OOBI"
 category: info
-
 docname: draft-ssmith-oobi-latest
 v: 3
 area: AREA
@@ -17,13 +16,11 @@ venue:
   latest: https://example.com/LATEST
 
 author:
- -
     fullname: Samuel M. Smith
     organization: ProSapien LLC
     email: sam@prosapien.com
 
 normative:
-
   OOBI_ID:
     target: https://github.com/WebOfTrust/ietf-oobi
     title: IETF OOBI (Out-Of-Band-Introduction) Internet-Draft
@@ -79,7 +76,7 @@ normative:
 
   RFC3339:
     target: https://datatracker.ietf.org/doc/html/rfc3339
-    title: Date and Time on the Internet: Timestamps
+    title: "Date and Time on the Internet: Timestamps"
 
 informative:
 
