@@ -1,0 +1,147 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-08-03T01:25:31.356323+00:00",
+  "repo": "trustoverip/tswg-oobi-specification",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 3,
+      "id": "I_kwDOKAcnH85tFHfg",
+      "title": "Fix references to WoT specs and update to ToIP",
+      "url": "https://github.com/trustoverip/tswg-oobi-specification/issues/3",
+      "state": "OPEN",
+      "author": "m00sey",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-07-31T21:30:51Z",
+      "updatedAt": "2023-07-31T21:30:51Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOKAcnH85W1GMc",
+      "title": "adds migration note",
+      "url": "https://github.com/trustoverip/tswg-oobi-specification/pull/1",
+      "state": "MERGED",
+      "author": "m00sey",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add a reference to the previous WebOfTrust repository.",
+      "createdAt": "2023-07-31T17:57:10Z",
+      "updatedAt": "2023-08-01T20:02:12Z",
+      "baseRepository": "trustoverip/tswg-oobi-specification",
+      "baseRefName": "main",
+      "baseRefOid": "2e6f89d595d612b7c863cb0487d3903295d4819f",
+      "headRepository": "m00sey/tswg-oobi-specification",
+      "headRefName": "main",
+      "headRefOid": "468bff16676b82b6054ca6914f935dbf11e1a405",
+      "closedAt": "2023-08-01T20:02:12Z",
+      "mergedAt": "2023-08-01T20:02:12Z",
+      "mergedBy": "m00sey",
+      "mergeCommit": {
+        "oid": "98bded485c63ec3173328cdb4f164868a6660de0"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOKAcnH85W2Iki",
+      "title": "Editorial",
+      "url": "https://github.com/trustoverip/tswg-oobi-specification/pull/2",
+      "state": "OPEN",
+      "author": "m00sey",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-07-31T21:28:56Z",
+      "updatedAt": "2023-08-01T21:41:05Z",
+      "baseRepository": "trustoverip/tswg-oobi-specification",
+      "baseRefName": "main",
+      "baseRefOid": "2e6f89d595d612b7c863cb0487d3903295d4819f",
+      "headRepository": "m00sey/tswg-oobi-specification",
+      "headRefName": "editorial",
+      "headRefOid": "e65975f90ea0ed8e49b18fc8979870eefb19205b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKAcnH85c21mJ",
+          "commit": {
+            "abbreviatedOid": "e65975f"
+          },
+          "author": "m00sey",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-08-01T21:41:04Z",
+          "updatedAt": "2023-08-01T21:41:05Z",
+          "comments": [
+            {
+              "originalPosition": 154,
+              "body": "Is it appropriate to replace data-time stamp with timestamp, should we reference RFC3339 or ISO8601",
+              "createdAt": "2023-08-01T21:41:04Z",
+              "updatedAt": "2023-08-01T21:41:05Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
