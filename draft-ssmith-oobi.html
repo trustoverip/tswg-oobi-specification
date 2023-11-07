@@ -9,24 +9,24 @@
 <meta content="
        An Out-Of-Band Introduction (OOBI) provides a discovery mechanism that associates a given URI or URL with a given AID (Autonomic IDentifier) or SAID (Self-Addressing IDentifier)  . The URI provided by an OOBI acts as a service endpoint for the discovery of verifiable information about the AID or SAID. As such an OOBI itself is not trusted but must be verified. To clarify, any information obtained from the service endpoint provided in the OOBI must be verified by some other mechanism. An OOBI, however, enables any internet and web search infrastructure to act as an out-of-band infrastructure to discover information that is verified using an in-band mechanism or protocol. The primary in-band verification protocol is KERI  . The OOBI protocol provides a web-based bootstrap and/or discovery mechanism for the KERI and the ACDC (Authentic Chained Data Container) protocols  . Thus the security (or more correctly the lack of security) of an OOBI is out-of-band with respect to a KERI AID or an ACDC that uses KERI. To clarify, everything in KERI or that depends on KERI is end-verifiable, therefore it has no security dependency nor does it rely on security guarantees that may or may not be provided by web or internet infrastructure.  OOBIs provide a bootstrap that enables what we call Percolated Information Discovery (PID) which is based on Invasion Percolation Theory  . This bootstrap may then be parlayed into a secure mechanism for accepting and updating data. The principal data acceptance and update policy is denoted BADA (Best-Available-Data-Acceptance). 
     " name="description">
-<meta content="xml2rfc 3.17.4" name="generator">
+<meta content="xml2rfc 3.18.2" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-ssmith-oobi-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.17.4
-    Python 3.11.4
+  xml2rfc 3.18.2
+    Python 3.11.6
     ConfigArgParse 1.5.3
     google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.3
-    platformdirs 3.9.1
+    platformdirs 3.11.0
     pycountry 22.3.5
     PyYAML 6.0
     requests 2.31.0
     setuptools 67.7.2
     six 1.16.0
-    wcwidth 0.2.6
+    wcwidth 0.2.9
 -->
 <link href="draft-ssmith-oobi.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -649,7 +649,7 @@ sub, sup {
 }
 #toc nav li {
   line-height: 1.3em;
-  margin: 0.75em 0;
+  margin: 2px 0;
   padding-left: 1.2em;
   text-indent: -1.2em;
 }
@@ -742,7 +742,7 @@ hr.addr {
     z-index: 2;
     top: 0;
     right: 0;
-    padding: 0;
+    padding: 1px 0 0 0;
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
@@ -866,16 +866,13 @@ hr.addr {
     border-top: none;
     padding-top: 0;
   }
-  figure, pre {
+  figure, pre, .vcard {
     page-break-inside: avoid;
-  }
-  figure {
-    overflow: scroll;
   }
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
-  h2+*, h3+*, h4+*, h5+*, h6+* {
+  :is(h2, h3, h4, h5, h6)+*, dd {
     page-break-before: avoid;
   }
   pre {
@@ -888,6 +885,9 @@ hr.addr {
   }
   td {
     border-top: 1px solid #ddd;
+  }
+  .toplink {
+    display: none;
   }
 }
 
@@ -989,28 +989,6 @@ address div.right {
   text-align: right;
 }
 
-/* Give the table caption label the same styling as the figcaption */
-
-@media print {
-  .toplink {
-    display: none;
-  }
-
-  /* avoid overwriting the top border line with the ToC header */
-  #toc {
-    padding-top: 1px;
-  }
-
-  /* Avoid page breaks inside dl and author address entries */
-  dd {
-    page-break-before: avoid;
-  }
-  .vcard {
-    page-break-inside: avoid;
-  }
-
-}
-
 /* Dark mode. */
 @media (prefers-color-scheme: dark) {
 :root {
@@ -1047,11 +1025,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">OOBI</td>
-<td class="right">July 2023</td>
+<td class="right">November 2023</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Smith</td>
-<td class="center">Expires 28 January 2024</td>
+<td class="center">Expires 10 May 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1042,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ssmith-oobi-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-07-27" class="published">27 July 2023</time>
+<time datetime="2023-11-07" class="published">7 November 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-01-28">28 January 2024</time></dd>
+<dd class="expires"><time datetime="2024-05-10">10 May 2024</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1118,7 +1096,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 28 January 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 10 May 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1363,9 +1341,11 @@ Rules for the acceptance of the *Update*:  (in order of priority)
 <p id="section-3.2.2-1">The <em>Update</em> to some record is signed by the controller of the AID, but the <em>Update</em> itself is NOT included in or anchored to the AID’s KEL. The record may have a <em>Prior</em> value that is being updated or the <em>Update</em> serves to create the initial value of the record. <em>Prior</em> means the prior record. All date-times are relative to the controller's date-time, NOT the database host's date-time.
 There are two cases. These are as follows.<a href="#section-3.2.2-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-3.2.2-2">
-<li id="section-3.2.2-2.1">Ephemeral AID whose key-state is fixed (no KEL needed)<a href="#section-3.2.2-2.1" class="pilcrow">¶</a>
+<li id="section-3.2.2-2.1">
+              <p id="section-3.2.2-2.1.1">Ephemeral AID whose key-state is fixed (no KEL needed)<a href="#section-3.2.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li id="section-3.2.2-2.2">Persistent AID whose key-state is provided by KEL<a href="#section-3.2.2-2.2" class="pilcrow">¶</a>
+            <li id="section-3.2.2-2.2">
+              <p id="section-3.2.2-2.2.1">Persistent AID whose key-state is provided by KEL<a href="#section-3.2.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
           </ol>
 <div class="alignLeft art-text artwork" id="section-3.2.2-3">
@@ -1417,13 +1397,17 @@ Rules for the acceptance of the *Update*:  (in order of priority)
 <p id="section-3.4.1-1">This section provides an example of using OKEA (OOBI KERI Endpoint Authorization) with BADA-RUN for endpoint disclosure.<a href="#section-3.4.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.4.1-2">The KERI protocol defines a generic <code>reply</code> message for updating information using the BADA-RUN policy. Each <code>reply</code> message includes a route, <code>r</code>, field that indicates both the type of the payload and the handler that should process the message. The route, <code>r</code>, field value is a slash, <code>/</code> delimited pathname string.  The Principal Controller AID is indicated by the CID (Controller ID) or <code>cid</code> field. The endpoint component Player is indicated the EID (Endpoint Controller ID) or <code>eid</code> field. There are two different authorization cases. In one case, a CID authorizes an EID in a Role. In the other case, an EID authorizes a Loc (URL location) for a scheme. There are two routes for each type of authorization. One route updates the authorization and the other nullifies the authorization. These are summarized as follows,<a href="#section-3.4.1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.4.1-3.1">Datetime stamped BADA authorization Reply message by CID of EID in Role (Update)<a href="#section-3.4.1-3.1" class="pilcrow">¶</a>
+<li class="normal" id="section-3.4.1-3.1">
+              <p id="section-3.4.1-3.1.1">Datetime stamped BADA authorization Reply message by CID of EID in Role (Update)<a href="#section-3.4.1-3.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-3.4.1-3.2">Datetime stamped BADA deauthorization by CID of EID in Role (Nullify)<a href="#section-3.4.1-3.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-3.4.1-3.2">
+              <p id="section-3.4.1-3.2.1">Datetime stamped BADA deauthorization by CID of EID in Role (Nullify)<a href="#section-3.4.1-3.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-3.4.1-3.3">Datetime stamped BADA authorization by EID of  URL for scheme (Update).<a href="#section-3.4.1-3.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-3.4.1-3.3">
+              <p id="section-3.4.1-3.3.1">Datetime stamped BADA authorization by EID of  URL for scheme (Update).<a href="#section-3.4.1-3.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-3.4.1-3.4">Datetime stamped BADA deauthorization by EID of URL for scheme  (Nullify)<a href="#section-3.4.1-3.4" class="pilcrow">¶</a>
+            <li class="normal" id="section-3.4.1-3.4">
+              <p id="section-3.4.1-3.4.1">Datetime stamped BADA deauthorization by EID of URL for scheme  (Nullify)<a href="#section-3.4.1-3.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 <p id="section-3.4.1-4">A party interested in discovering the service endpoint for a given Controller AID initiates the discovery by providing an OOBI. A successful discovery will result in the return of signed <code>reply</code> messages that provide verifiable proof that the service endpoint (either directly provided in the OOBI, or indirectly provided via forwarding) is an authorized endpoint for that AID.<a href="#section-3.4.1-4" class="pilcrow">¶</a></p>
@@ -1820,6 +1804,7 @@ appear in all capitals, as shown here.<a href="#section-11-1" class="pilcrow">¶
       <h2 id="name-references">
 <a href="#section-14" class="section-number selfRef">14. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
 <section id="section-14.1">
         <h3 id="name-normative-references">
 <a href="#section-14.1" class="section-number selfRef">14.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
@@ -1863,6 +1848,8 @@ appear in all capitals, as shown here.<a href="#section-11-1" class="pilcrow">¶
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
+<div id="sec-informative-references">
 <section id="section-14.2">
         <h3 id="name-informative-references">
 <a href="#section-14.2" class="section-number selfRef">14.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
@@ -1938,6 +1925,7 @@ appear in all capitals, as shown here.<a href="#section-11-1" class="pilcrow">¶
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
 </section>
 <div id="acknowledgments">
 <section id="appendix-A">
